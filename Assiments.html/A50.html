@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        <p>WAP to find out all the palindrome numbers between two entered numbers</p>
+        <script>
+let num = 10;
+let numlast = 1000;
+
+for (let i = num; i <= numlast; i++) {
+    let x = i;
+    let reversed = 0;
+
+    while (x !== 0) {
+        let digit = x % 10;
+        reversed = reversed * 10 + digit;
+        x = Math.floor(x / 10);
+    }
+
+    if (i === reversed) {
+        document.write("Palindrome: " + i + "<br>");
+    }
+}
+
+      
+        </script>
+    </pre>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>WAP to find out the factors of all the numbers between two entered numbers</p>
+    <pre>
+        <script>
+            let num1 = 2;
+            let num2 = 4;
+
+            for(let j = num1; j<=num2; j++)
+        {
+            document.write("<br> Factor of " + j +" :   ")
+            for(let i=1; i<=j; i++)
+        {
+            if(j%i==0)
+            document.write("  "+i);
+        }
+            document.write("<br> ")
+        }
+        </script>
+    </pre>
+    
+</body>
+</html>

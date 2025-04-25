@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>WAP to print all the strong numbers between two entered numbers</p>
+    <pre>
+        <script>
+            
+            let num = parseInt(2)
+            let last = parseInt(1923)
+            for(let i=num; i<=last; i++)
+        {
+            let origial = i;
+            let num3 = i;
+            let digit = 0;
+            let totalsum = 0;
+           
+            while(num3!=0)
+        {
+            digit = num3%10;
+            // document.write(" "+digit)
+            let sum = 1;
+            for(let j=digit; j>=1; j--)
+        {
+            sum = sum*j;
+            
+        }
+        num3 = Math.floor(num3 / 10); // Better way to remove decimal
+        totalsum += sum; // Add instead of overwrite
+        }
+            //    document.write(totalsum)
+       if(origial==totalsum)
+       {
+        document.write("<Br>It is a Strong number "+origial)
+       }
+    }
+        </script>
+    </pre>
+ 
+</body>
+</html>

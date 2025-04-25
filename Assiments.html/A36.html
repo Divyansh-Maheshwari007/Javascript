@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        WAP to reverse a number
+    </h1>
+    <pre>
+        <script>
+            let num = parseInt(prompt("Enter a number "))
+            let reversed = 0;
+            document.write(num+"<br>")
+             while (num !== 0) {
+        let digit = num % 10;
+        document.write(digit)
+        reversed = reversed * 10 + digit;
+        num = Math.floor(num / 10);
+    }
+    // document.write(reversed)
+        </script>
+    </pre>
+</body>
+</html>

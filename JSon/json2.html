@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        <script>
+            // localStorage.setItem("data",customerInfo);
+            // sessionStorage.setItem("data",customerInfo);
+            
+            // Json String
+            let customerInfo = '{"name":"abc","age":24,"contact":9009111222}';
+            let obj = JSON.parse(customerInfo);  //JSON.parse() is used to turn a JSON-formatted string into a real JavaScript object you can work with.
+            document.write(obj.name+"  "+obj.age+" "+obj.contact);
+        </script>
+    </pre>
+</body>
+</html>

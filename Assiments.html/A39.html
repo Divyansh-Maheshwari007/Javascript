@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WAP to check whether entered number is strong or not</h1>
+    <!-- <p>Consider the number 145:
+
+        The digits are 1, 4, and 5.
+        
+        The factorial of 1 is 1! = 1.
+        
+        The factorial of 4 is 4! = 24.
+        
+        The factorial of 5 is 5! = 120.
+        
+        Summing these factorials: 1 + 24 + 120 = 145.</p> -->
+    <pre>
+        <script>
+            let num = parseInt(prompt("Enter a number"))
+            let num3 = num;
+            let digit = 0;
+            let totalsum = 0;
+           
+            while(num!=0)
+        {
+            digit = num%10;
+            // document.write(" "+digit)
+            let sum = 1;
+            for(let i=digit; i>=1; i--)
+        {
+            sum = sum*i;
+            
+        }
+        num = Math.floor(num / 10); // Better way to remove decimal
+        totalsum += sum; // Add instead of overwrite
+        }
+            //    document.write(totalsum)
+       if(num3==totalsum)
+       {
+        document.write("It is a Strong number ")
+       }
+       else
+       {
+        document.write("It is not a Strong number ")
+       }
+        </script>
+    </pre>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>WAP to check whether entered number is palindrome or not</p>
+    <pre>
+        <script>
+            let num = parseInt(121)
+            let num1 = num;
+            let reversed = 0;
+            document.write(num+"<br>")
+            while (num !== 0) 
+            {
+                 let digit = num % 10;
+                 document.write(digit)
+                 reversed = reversed * 10 + digit;
+                 num = Math.floor(num / 10);
+            }
+       
+       if(num1==reversed)
+       {
+        document.write("palindrome")
+       }
+       else
+       {
+        document.write("not a palindrome")
+       }
+        </script>
+    </pre>
+</body>
+</html>

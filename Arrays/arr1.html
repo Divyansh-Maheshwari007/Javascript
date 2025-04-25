@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <pre>
+    <script>
+        // this type array is creating 
+         let x = [1,2,3];
+         document.write(x);
+
+         // // Creating and Initializing an array with values
+         // consturctor in aaray
+        let a = new Array(10,20, 30);
+        document.write("<br>"+a)
+
+        // Creating an Array and Initializing with Values
+        let a1 = ["HTML", "CSS", "JS"];
+        document.write("<br>"+a1)
+        document.write("<br>"+a1[0]);
+
+        let a3 = [1,2,3];
+        a3.push(5);   // this method is used to add element in the array
+        document.write("<br>"+a3)
+        a3.unshift(8)
+        document.write("<br>"+a3) // this method is used to add element in the 0 index of aary that means first in array
+
+        // Removes and returns the last element
+        let a4 = [1,2,3];
+        let lst = a4.pop();  // pop() method is used to remove the last element of an array
+        document.write("<br> After Removing the last: " + a4); 
+        document.write("<br>"+a4);
+
+        // Removes and returns the first element
+        let a5 = [1,2,3];
+        let fst = a5.shift();  // this method is used to remove the element from the first index of the array 
+        document.write("<br>After Removing the First: " + a5);
+
+        // Removes 2 elements starting from index 1
+        let a6 = [1,22,32,4]
+        a6.splice(2,1);
+        document.write("<br>After Removing 2 elements starting from index  " + a6);
+
+        // Increase the array length to 7
+        let a7 =[1,2,3]
+        a7.length = 7;
+        document.write("<br>After Increasing Length: ", a7);
+
+        let a8 = ["HTML", "CSS", "JS", "React"];
+        let b = ["Node.js", "Expess.js"];
+        // Concatenate both arrays
+        let concateArray = a8.concat(b);
+        document.write("Concatenated Array: ", concateArray);
+
+        // String to convert aarya 
+        let str1 = "Hello";
+        let arr = Array.from(str1);
+        console.log(arr); // Output: ["H", "e", "l", "l", "o"]
+
+        // Split a string into an array of substrings
+        var str2 = "How are you doing today?";
+        var res = str2.split(" ");
+        // OUTPUT: How,are,you,doing,today?
+
+    </script>
+   </pre>
+    
+</body>
+</html>

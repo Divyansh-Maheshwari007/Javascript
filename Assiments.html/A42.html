@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        <h1>WAP to find out HCF of a number</h1>
+        <script>
+           // Divisors of 6 = 1, 2, 3, 6
+           // Divisors of 18 = 1, 2, 3, 6, 9, 18
+           const num1 = parseInt(prompt("Enter the first number"));
+const num2 = parseInt(prompt("Enter the second number:"));
+
+let a = num1;
+let b = num2;
+
+while (b !== 0) {
+    let temp = b;
+    b = a % b;
+    a = temp;
+}
+
+document.write(`The HCF of ${num1} and ${num2} is ${a}`);
+
+        </script>
+    </pre>
+</body>
+</html>

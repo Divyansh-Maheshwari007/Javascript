@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>WAP to find out all the perfect numbers between two entered numbers</p>
+    <pre>
+        <script>
+
+        let x = 2;
+        let x2 = 10000;
+
+        for (let j = x; j <= x2; j++) {
+        let sum = 0;
+        for (let i = 1; i < j; i++) {
+        if (j % i == 0) {
+            sum += i;
+        }
+    }
+    if (sum == j) {
+        document.write("Perfect number: " + j + "<br>");
+    }
+}
+
+
+           
+
+        
+        </script>
+    </pre>
+</body>
+</html>

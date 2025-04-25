@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WAP to check whether entered number is perfect or not</h1>
+    <h1>6: Divisors are 1, 2, 3. Sum = 1 + 2 + 3 = 6.</h1>
+    <h1>28: Divisors are 1, 2, 4, 7, 14. Sum = 1 + 2 + 4 + 7 + 14 = 28.</h1>
+    <pre>
+        <script>
+            
+            let sum = 0;
+            let x = prompt("Enter a number ");
+            for(let i=1; i<x; i++)
+        {
+            if(x%i==0)
+        {
+            sum+=i;
+           
+        }
+        }
+        if(sum==x)
+        {
+            document.write("Perfect Number ");
+        }
+        else
+        {
+            document.write("Not perfect number ");
+        }
+        </script>
+    </pre>
+</body>
+</html>

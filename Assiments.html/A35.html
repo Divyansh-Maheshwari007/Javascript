@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>WAP to count number of digits</p>
+
+     <pre>
+        <script>
+            let x = parseInt(prompt("Enter a number"));
+            let  count = 0;
+           let  y=x;
+            
+            while(x>0)
+        {
+            count++;
+             x= x/10;
+             x = parseInt(x);
+            //  document.write("<br>"+x)
+        }
+
+        document.write(y+" Count of a number : "+count);
+            
+        </script>
+     </pre>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WAP to count no. Of even and odd digits in a number</h1>
+    <pre>
+        <script>
+            let x = 10;
+            let counteven = 0;
+            let countodd = 0;
+            for(let i=1; i<=x; i++)
+        {
+            if(i%2==0)
+        {
+            document.write("  "+i)
+            counteven++;
+        }
+        if(i%2!=0)
+        {
+            document.write("  "+i)
+            countodd++;
+        }
+       
+        }
+        document.write("<br> Count of even number : "+counteven);
+        document.write("<br> count of odd number : "+countodd);
+        
+        </script>
+    </pre>
+</body>
+</html>

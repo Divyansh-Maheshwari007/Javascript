@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        WAP to find out all the Armstrong numbers between two entered numbers
+    </p>
+    <pre>
+        <script>
+            let start = parseInt(2);
+            let end = parseInt(10000);
+         for (let i = start; i <= end; i++) {
+        let num = i;
+        let sum = 0;
+        let temp = num;
+        let count = 0;
+
+        // Count digits
+        while (temp > 0) {
+            count++;
+            temp = Math.floor(temp / 10);
+        }
+
+        temp = num;
+        // Calculate Armstrong sum
+        while (temp > 0) {
+            let digit = temp % 10;
+            sum += Math.pow(digit, count);
+            temp = Math.floor(temp / 10);
+        }
+
+        if (sum === num) {
+           document.write( "<br> is an Armstrong number  " + sum);
+        }
+    }
+
+   
+
+
+
+      
+        </script>
+    </pre>
+</body>
+</html>
