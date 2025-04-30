@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Arrow function use </p>
+    <pre>
+        <script>
+            const a = ["divasnh", "mitesh" , "anant" , "amit"]
+
+            const a2 = a.map(function(s)
+        {
+            return s.length;
+        })
+            
+        document.write(`Normal way to write ${a2} `)
+
+        // use arrow function 
+
+        const a3 = a.map((s)=>s.length)
+        document.write(`<br>With arrow function ${a3}`)
+
+
+        </script>
+    </pre>
+</body>
+</html>
