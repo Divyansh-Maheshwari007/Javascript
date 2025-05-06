@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <center>
+            <img id="main" src="https://thumbs.dreamstime.com/b/spiritual-omkareshwar-jyotirlinga-temple-banks-narmada-river-omkareshwar-madhyapradesh-india-can-be-termed-as-231340323.jpg?w=1600" width="300px" height="300px"/>
+
+            <br/><br/><br/>
+            <img onclick="changeImage('first')" id="first" src="https://www.trawell.in/admin/images/upload/127608564Omkareshwar_Temple.jpg" width="150" height="150"/>&nbsp;&nbsp;&nbsp;
+            <img onclick="changeImage('second')" id="second" src="https://pawanyatra.com/uploads/images/image_750x_6075c07994cd2.jpg" width="150" height="150"/>&nbsp;&nbsp;&nbsp;
+            <img onclick="changeImage('third')" id="third" src="https://th.bing.com/th/id/R.f08919cdaaf9acffc0745a1e4123761d?rik=6bftngzlJJ8njw&riu=http%3a%2f%2fdiscoversikhism.com%2fimages%2fgurdwara%2fgurdwara_sri_omkareshwar_sahib%2fgurdwara_sri_omkareshwar_sahib3.jpg&ehk=NWwvu5mNXQEorbo5G0%2fjXXWikSCKpMhnVS7OU2IhuAk%3d&risl=&pid=ImgRaw&r=0" width="150" height="150"/>&nbsp;&nbsp;&nbsp;
+        </center>
+    </body>
+    <script>
+        function changeImage(currentImageId){
+            let mainImage = document.getElementById("main");
+            let currentImage = document.getElementById(currentImageId);
+            
+            let tem = mainImage.src;
+            mainImage.src = currentImage.src;
+            currentImage.src = temp;
+        }
+    </script>
+</html>

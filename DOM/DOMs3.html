@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<img id="main" src="https://thumbs.dreamstime.com/b/spiritual-omkareshwar-jyotirlinga-temple-banks-narmada-river-omkareshwar-madhyapradesh-india-can-be-termed-as-231340323.jpg?w=1600" width="300px" height="300px"/>
+<button onclick="changeImage(1)">+</button>
+<button onclick="changeImage(0)">-</button>
+<body>
+    <script>
+        function changeImage(n){
+            let img = document.getElementById("main");
+            if(n){
+                img.width = img.width*1 + 50;
+                img.height = img.height*1 + 50;
+            }
+            else{
+                img.width = img.width*1 - 50;
+                img.height = img.height*1 - 50;
+            }
+        }
+    </script>
+</body>
+</html>
