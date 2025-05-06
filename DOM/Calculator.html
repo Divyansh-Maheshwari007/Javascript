@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<style>
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+}
+
+.calculator {
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+  transition: transform 0.5s;
+}
+
+.calculator:hover {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  gap: 15px;
+}
+
+button {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  box-shadow: 5px 5px 10px #c5c5c5,
+              -5px -5px 10px #ffffff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:active {
+  box-shadow: inset 5px 5px 10px #c5c5c5,
+              inset -5px -5px 10px #ffffff;
+  transform: scale(0.95);
+}
+
+button:hover {
+  background: linear-gradient(145deg, #d1d1d1, #f8f8f8);
+}
+
+
+</style>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" readonly>
+    <div class="buttons">
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>/</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>*</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>-</button>
+      <button>0</button>
+      <button>C</button>
+      <button>=</button>
+      <button>+</button>
+    </div>
+  </div>
+
+  <script >const display = document.getElementById('display');
+    const buttons = document.querySelectorAll('button');
+    
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const value = button.textContent;
+    
+        if (value === 'C') {
+          display.value = '';
+        } else if (value === '=') {
+          try {
+            display.value = eval(display.value);
+          } catch (e) {
+            display.value = 'Error';
+          }
+        } else {
+          display.value += value;
+        }
+      });
+    });
+    </script>
+</body>
+</html>
