@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tailor Measurement Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f0f0; padding: 20px; }
+        .form-section { background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 10px; }
+        label { display: block; margin-top: 10px; }
+        select, input[type="text"] { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 20px; padding: 10px 20px; font-size: 16px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+
+<h1>Tailor Shop Measurement Form</h1>
+
+<div class="form-section">
+    <h2>Customer Details</h2>
+    <label>Name: <input type="text" id="name"></label>
+    <label>City: <input type="text" id="city"></label>
+    <label>Mobile Number: <input type="text" id="contact"></label>
+</div>
+
+<div class="form-section">
+    <h2>Shirt Measurements</h2>
+    <label>Chest: <select id="shirt_chest"></select></label>
+    <label>Waist: <select id="shirt_waist"></select></label>
+    <label>Shoulder: <select id="shirt_shoulder"></select></label>
+    <label>Sleeve Length: <select id="shirt_sleeve"></select></label>
+    <label>Shirt Length: <select id="shirt_length"></select></label>
+    <label>Neck: <select id="shirt_neck"></select></label>
+</div>
+
+<div class="form-section">
+    <h2>Pant Measurements</h2>
+    <label>Waist: <select id="pant_waist"></select></label>
+    <label>Hip: <select id="pant_hip"></select></label>
+    <label>Thigh: <select id="pant_thigh"></select></label>
+    <label>Inseam Length: <select id="pant_inseam"></select></label>
+    <label>Outseam Length: <select id="pant_outseam"></select></label>
+    <label>Bottom Width: <select id="pant_bottom"></select></label>
+</div>
+
+<div class="form-section">
+    <h2>Kurta Pajama Measurements</h2>
+    <label>Chest: <select id="kurta_chest"></select></label>
+    <label>Waist: <select id="kurta_waist"></select></label>
+    <label>Shoulder: <select id="kurta_shoulder"></select></label>
+    <label>Sleeve Length: <select id="kurta_sleeve"></select></label>
+    <label>Kurta Length: <select id="kurta_length"></select></label>
+    <label>Pajama Length: <select id="pajama_length"></select></label>
+    <label>Neck: <select id="kurta_neck"></select></label>
+</div>
+
+<button onclick="saveMeasurements()">Save Measurements</button>
+
+<script>
+    function populateSelect(id, min, max) {
+        let select = document.getElementById(id);
+        for (let i = min; i <= max; i++) {
+            let option = document.createElement('option');
+            option.value = i;
+            option.text = i;
+            select.add(option);
+        }
+    }
+
+    // Shirt Sizes
+    populateSelect('shirt_chest', 30, 50);
+    populateSelect('shirt_waist', 28, 50);
+    populateSelect('shirt_shoulder', 14, 24);
+    populateSelect('shirt_sleeve', 20, 30);
+    populateSelect('shirt_length', 26, 40);
+    populateSelect('shirt_neck', 14, 20);
+
+    // Pant Sizes
+    populateSelect('pant_waist', 28, 44);
+    populateSelect('pant_hip', 30, 50);
+    populateSelect('pant_thigh', 18, 30);
+    populateSelect('pant_inseam', 28, 40);
+    populateSelect('pant_outseam', 34, 46);
+    populateSelect('pant_bottom', 12, 20);
+
+    // Kurta Pajama Sizes
+    populateSelect('kurta_chest', 30, 50);
+    populateSelect('kurta_waist', 28, 50);
+    populateSelect('kurta_shoulder', 14, 24);
+    populateSelect('kurta_sleeve', 20, 30);
+    populateSelect('kurta_length', 36, 50);
+    populateSelect('pajama_length', 36, 46);
+    populateSelect('kurta_neck', 14, 20);
+
+    function saveMeasurements() {
+        let data = {
+            name: document.getElementById('name').value,
+            city: document.getElementById('city').value,
+            contact: document.getElementById('contact').value,
+            shirt: {
+                chest: document.getElementById('shirt_chest').value,
+                waist: document.getElementById('shirt_waist').value,
+                shoulder: document.getElementById('shirt_shoulder').value,
+                sleeve: document.getElementById('shirt_sleeve').value,
+                length: document.getElementById('shirt_length').value,
+                neck: document.getElementById('shirt_neck').value
+            },
+            pant: {
+                waist: document.getElementById('pant_waist').value,
+                hip: document.getElementById('pant_hip').value,
+                thigh: document.getElementById('pant_thigh').value,
+                inseam: document.getElementById('pant_inseam').value,
+                outseam: document.getElementById('pant_outseam').value,
+                bottom: document.getElementById('pant_bottom').value
+            },
+            kurta_pajama: {
+                chest: document.getElementById('kurta_chest').value,
+                waist: document.getElementById('kurta_waist').value,
+                shoulder: document.getElementById('kurta_shoulder').value,
+                sleeve: document.getElementById('kurta_sleeve').value,
+                kurta_length: document.getElementById('kurta_length').value,
+                pajama_length: document.getElementById('pajama_length').value,
+                neck: document.getElementById('kurta_neck').value
+            }
+        };
+
+        console.log('Saved Data:', data);
+        alert('Measurements Saved! Open console to see the data.');
+    }
+</script>
+
+</body>
+</html>

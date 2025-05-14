@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>DOM onmouseover event</title>
+    </head>
+    <body>
+        
+        <h1 id="hID"> Divyansh </h1>
+        <h2 >HTML DOM onmouseover event </h2>
+        <script>
+            document.getElementById("hID").addEventListener("mouseover",over);
+            document.getElementById("hID").addEventListener("mouseout",out);
+
+            function over()
+            {
+                document.getElementById("hID").style.fontSize = "40px";
+            }
+            function out(){
+                document.getElementById( "hID" ).style.fontSize = "20px"
+            }
+        </script>
+    </body>
+</html>
