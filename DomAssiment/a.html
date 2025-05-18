@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Gallery</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td {
+      width: 20%; /* 100% / 5 columns */
+      text-align: center;
+      padding: 10px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    button {
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Photo Gallery</h2>
+<input type="file" id="imageInput" accept="image/*" multiple>
+<button onclick="addImages()">Add Images</button>
+
+<table id="galleryTable">
+  <!-- Images will appear here -->
+</table>
+
+<script>
+  let images = [];
+
+  function addImages() {
+    const input = document.getElementById('imageInput');
+    const files = input.files;
+
+    for (let file of files) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        images.push(e.target.result);
+        renderGallery();
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+  function deleteImage(index) {
+    images.splice(index, 1);
+    renderGallery();
+  }
+
+  function renderGallery() {
+    const table = document.getElementById('galleryTable');
+    table.innerHTML = ''; // Clear previous rows
+
+    for (let i = 0; i < images.length; i += 5) {
+      const row = document.createElement('tr');
+
+      for (let j = i; j < i + 5 && j < images.length; j++) {
+        const cell = document.createElement('td');
+        cell.innerHTML = `
+          <img src="${images[j]}" alt="Image">
+          <button onclick="deleteImage(${j})">Delete</button>
+        `;
+        row.appendChild(cell);
+      }
+
+      table.appendChild(row);
+    }
+  }
+</script>
+
+</body>
+</html>
